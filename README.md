@@ -15,31 +15,31 @@ plane. They try 4 different weak learners: axis aligned, linear, conic and parab
 Using one single fern:    
 
 Axis aligned:    
-<img src="fern_AxisAligned.png" width="200">
+<img src="img/fern_AxisAligned.png" width="200">
 
 Linear:       
-<img src="fern_Linear.png" width="200">
+<img src="img/fern_Linear.png" width="200">
 
 Conic:          
-<img src="fern_Conic.png" width="200">
+<img src="img/fern_Conic.png" width="200">
 
 Parabola:           
-<img src="fern_Parabola.png" width="200">
+<img src="img/fern_Parabola.png" width="200">
 
 
 Using 50 ferns, with soft or hard decision boundaries:       
 
 Axis aligned:       
-<img src="randomferns_AxisAligned_soft.png" width="200"> &nbsp; <img src="randomferns_AxisAligned.png" width="200">
+<img src="img/randomferns_AxisAligned_soft.png" width="200"> &nbsp; <img src="rimg/andomferns_AxisAligned.png" width="200">
 
 Linear:       
-<img src="randomferns_Linear_soft.png" width="200"> &nbsp; <img src="randomferns_Linear.png" width="200">
+<img src="img/randomferns_Linear_soft.png" width="200"> &nbsp; <img src="img/randomferns_Linear.png" width="200">
 
 Conic:         
-<img src="randomferns_Conic_soft.png" width="200"> &nbsp; <img src="randomferns_Conic.png" width="200">
+<img src="img/randomferns_Conic_soft.png" width="200"> &nbsp; <img src="img/randomferns_Conic.png" width="200">
 
 Parabola:         
-<img src="randomferns_Parabola_soft.png" width="200"> &nbsp; <img src="randomferns_Parabola.png" width="200">
+<img src="img/randomferns_Parabola_soft.png" width="200"> &nbsp; <img src="img/randomferns_Parabola.png" width="200">
 
 Regression example
 ------------------
@@ -53,31 +53,31 @@ They try 4 different weak learners: axis aligned, linear, conic and parabolas.
 Using one single fern:    
 
 Axis aligned:    
-<img src="fern_AxisAligned_regression.png" width="200">
+<img src="img/fern_AxisAligned_regression.png" width="200">
 
 Linear:       
-<img src="fern_Linear_regression.png" width="200">
+<img src="img/fern_Linear_regression.png" width="200">
 
 Conic:          
-<img src="fern_Conic_regression.png" width="200">
+<img src="img/fern_Conic_regression.png" width="200">
 
 Parabola:           
-<img src="fern_Parabola_regression.png" width="200">
+<img src="img/fern_Parabola_regression.png" width="200">
 
 
 Using 50 ferns:       
 
 Axis aligned:       
-<img src="randomferns_AxisAligned_regression.png" width="200">
+<img src="img/randomferns_AxisAligned_regression.png" width="200">
 
 Linear:       
-<img src="randomferns_Linear_regression.png" width="200">
+<img src="img/randomferns_Linear_regression.png" width="200">
 
 Conic:         
-<img src="randomferns_Conic_regression.png" width="200">
+<img src="img/randomferns_Conic_regression.png" width="200">
 
 Parabola:         
-<img src="randomferns_Parabola_regression.png" width="200">
+<img src="img/randomferns_Parabola_regression.png" width="200">
 
 References
 ----------
