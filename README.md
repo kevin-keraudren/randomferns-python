@@ -30,7 +30,7 @@ Parabola:
 Using 50 ferns, with soft or hard decision boundaries:       
 
 Axis aligned:       
-<img src="img/randomferns_AxisAligned_soft.png" width="200"> &nbsp; <img src="rimg/andomferns_AxisAligned.png" width="200">
+<img src="img/randomferns_AxisAligned_soft.png" width="200"> &nbsp; <img src="img/randomferns_AxisAligned.png" width="200">
 
 Linear:       
 <img src="img/randomferns_Linear_soft.png" width="200"> &nbsp; <img src="img/randomferns_Linear.png" width="200">
