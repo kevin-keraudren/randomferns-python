@@ -29,7 +29,7 @@ def img_test( tree, points, colors, filename, size=512, radius=3, soft=False ):
     points = ((points - v_min)/step).astype('int')
     for p,r in zip(points,responses):
         cv2.circle(img, tuple(p), radius+1, (0,0,0), thickness=-1 )
-        cv2.circle(img, tuple(p), radius, colors[int(r)], thickness=-1 )
+        cv2.circle(img, tuple(p), radius, colors[int(r)].tolist(), thickness=-1 )
 
     cv2.imwrite(filename,img)
 
@@ -37,9 +37,9 @@ def img_test( tree, points, colors, filename, size=512, radius=3, soft=False ):
 t = np.arange(0,10,0.1)
 
 theta = [0,30,60]
-colors = np.array( [(255,0,0),
-                    (0,255,0),
-                    (0,0,255)] )
+colors = np.array( [[255,0,0],
+                    [0,255,0],
+                    [0,0,255]] )
 
 points = np.zeros((len(t)*len(theta),2))
 responses = np.zeros(len(t)*len(theta))
@@ -49,7 +49,7 @@ for c in range(len(theta)):
     responses[c*len(t):(c+1)*len(t)] = c
 
 for learner in weakLearner.__all__:
-    print learner
+    print(learner)
     fern = Fern( depth=10, test_class=getattr( weakLearner, learner)() )
     fern.fit( points, responses )
     
