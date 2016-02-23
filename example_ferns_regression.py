@@ -20,13 +20,19 @@ def img_test( tree, points, colors, filename, size=512, radius=3 ):
 
     if len(predictions.shape)==2:
         predictions = predictions[np.newaxis,...]
+    predictions = predictions.reshape((predictions.shape[0]*predictions.shape[1], predictions.shape[2]))
     
-    for f in range(predictions.shape[0]):
-        for i,(x,y) in enumerate(predictions[f]):
-            y0 = np.round((y-v_min)/step).astype('int32')
-            x0 = np.round((x-v_min)/step).astype('int32')
-            if 0 < x0 < size and 0 < y0 < size:
-                img[y0,x0] += np.array([1, 1, 1])
+    predictions = np.round((predictions-v_min)/step).astype('int32')
+
+    flat_indices = np.ravel_multi_index(np.transpose(predictions), img.shape[:2], mode='clip')
+    bins = np.bincount(flat_indices, minlength=np.prod(img.shape[:2]))
+    img += bins.reshape(img.shape[:2])[...,np.newaxis]
+    
+    # artefacts of clipping
+    img[0] = 0
+    img[-1] = 0
+    img[:,0] = 0
+    img[:,-1] = 0
     
     img *= 255/img.max()
 
