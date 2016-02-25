@@ -53,13 +53,13 @@ for learner in weakLearner.__all__:
     fern = Fern( depth=10, test_class=getattr( weakLearner, learner)() )
     fern.fit( points, responses )
     
-    img_test( fern, points, colors, 'fern_'+str(learner)+'.png' )
+    img_test( fern, points, colors, 'img/fern_'+str(learner)+'.png' )
     
     randomferns = RandomFerns( depth=10, n_estimators=50,
                                test_class=getattr( weakLearner, learner)() )
     randomferns.fit( points, responses )
 
-    img_test( randomferns, points, colors, 'randomferns_'+str(learner)+'.png' )
-    img_test( randomferns, points, colors, 'randomferns_'+str(learner)+'_soft.png', soft=True )
+    img_test( randomferns, points, colors, 'img/randomferns_'+str(learner)+'.png' )
+    img_test( randomferns, points, colors, 'img/randomferns_'+str(learner)+'_soft.png', soft=True )
 
             
