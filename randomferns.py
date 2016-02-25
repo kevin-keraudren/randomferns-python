@@ -15,10 +15,11 @@ class Fern(object):
         self.tests = np.array( self.test_class.generate_all( points, self.depth ) )
         if self.regression:
             self.target_dim = responses.shape[1]
-            self.data = np.ones( (2**self.depth, self.target_dim), dtype='float64' )
+            self.data = np.zeros( (2**self.depth, self.target_dim), dtype='float64' )
             bins = self.apply_tests(points)
             bincount = np.bincount(bins, minlength=self.data.shape[0])
-            self.data[self.apply_tests(points)] += responses
+            for dim in range(self.target_dim):
+                self.data[:,dim] += np.bincount(bins, weights=responses[:,dim], minlength=self.data.shape[0])
             self.data[bincount>0] /= bincount[bincount>0][...,np.newaxis]
         else:
             self.n_classes = responses.max() + 1
